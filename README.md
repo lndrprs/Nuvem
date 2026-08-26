@@ -31,10 +31,10 @@
       - BlockBlobStorage; 
       - FileStorage;
       - BlobStorage. 
-    - Todas as storage accountes são criptografas usando Storage Service Encryption (SSE), para dados em descanso; 
+    - Todas as storage accounts são criptografas usando Storage Service Encryption (SSE), para dados em descanso; 
     - A movimentação de dados entre diferentes storage accounts pode ser  feita automaticamente ou manualmente;
       - Manualmente, pode usar:
-        - AzCopy (CLI utility);
+       - AzCopy (CLI utility);
     	 - Data Movement Library (Projeto para alta performance, confiável, e oprações de transferências fáceis similares ao AzCopy);
     	 - REST API ou Client Library permite criar uma aplicação customizada para migrar dados. 
     
@@ -108,24 +108,38 @@
         - Entrega o menor preço por gigabyte para Azure Storage.
 
       - BlobStorage Accounts 
+        - Binary Large Object (BLOb)
+        - Armazena Imagem, Vídeo, Áudio, Logs, Backups, etc; 
+        - Acessível através de REST API, Powershell e Azure CLI; 
+        - Organização via Contêiner, junta blobs similares num diretório. 
         - Apenas suporta Blobs Block e Append;
         - BlobStorage apenas oferta performance padrão. BlockBlobStorage suporta performance premium; 
         - Legacy BlobStorage está sendo retirado.
 
-      - BlockBlob Storage Accounts 
-        - Providencia latência baixa / consistente, e frequências de transações mais altas; 
-        - Fazendo upgrade De Blob para General v2 não tem tempo de inatividade e não precisa copiar os dados; 
-        - Não suporta níves de acesso: hot, cool, cold e archive; 
-        - Pode ser usado para armazenar dados não estruturadas como block blobs ou append blobs.   
+        - Tipos de Blob:
+          - Block: Binários e Textos até 4.8 TB, blobs maiores até 190.7 TiB 
+          - Append: Ideal para dados de logs de VM's; 
+          - Page: armazena arquivos de acesso aleatório em até 8 TB e arquivos VHD. 
+
+        - Níveis de Acesso:
+          - Hot; 
+          - Cool;
+          - Archive.  
+
+          - Obs.: Permite gerenciamento de ciclo de vida. 
+
+        - Características do Blob 
+          - Permite Versionamento;
+          - Snapshots; 
+          - Replicamento entre Contas; 
+          - Permite Website Estático.
+ 
 
       - FileStorage Accounts 
         - Apenas suporta compartilhamentos de arquivo; 
         - Oferece bursting de IOPS 
 
-      |Storage Account | Serviços Suportados | Performances Suportadas | Níveis de Acesso | Replicação | 
-      |----------------|---------------------|-------------------------|------------------|-----------|
-      |General-Purpose V2 |Blob, File, Queue, Table, Disk, Data Lake Gen2 | Standard, Premium | LRS, GRS, RA-GRS, ZRS- GZRS, RA-GZRS | 
-    
+
   </div>
   </details>
 
