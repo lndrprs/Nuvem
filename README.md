@@ -92,7 +92,8 @@
     	 - Dados são copiados sincronizamente entre 3 zonas na região primária, e copiado assincronicamente para a região secundária; 
     	 - Permite habilitar Read-only Geo Zone Redundant Storage (RA-GZRS), para ler dados na região secundária. 
     	 
-      - A mudança de redundância é um processo assincrono, sem SLA para término. Pode levar dias ou semanas, dependendo do tamanho da conta e região;
+      - A mudança de redundância é um processo assincrono, sem SLA para término. 
+        - Pode levar dias ou semanas, dependendo do tamanho da conta e região;
         - Durante a conversão, os dados permanecem acessíveis sem perda ou tempo de inatividade. 
     
   </div>
