@@ -84,17 +84,47 @@
     	 
       - Geo Redundant Storage (GRS)
         - Redundância Inter-Regional;
-    	 - Dados são copiados em 3 zonas na região primária, e assincronamente copiado para a região secundária;
+    	 - Dados são copiados em 1 local físico na região primária (LRS), e assincronamente copiado para a região secundária;
     	 - Habilitar Read-Only Geo-Redundant Storage (RA-GRS), para acessar dados na região secundária. 
     	 
       - Geo-Zone-Redundant Storage (GZRS)
         - Redundância para alta disponibilidade e máxima durabilidade; 
-    	 - Dados são copiados sincronizamente entre 3 zonas na região primária, e copiado assincronicamente para a região secundária; 
+    	 - Dados são copiados sincronizamente entre 3 zonas na região primária (ZRS), e copiado assincronicamente para a região secundária; 
     	 - Permite habilitar Read-only Geo Zone Redundant Storage (RA-GZRS), para ler dados na região secundária. 
     	 
       - A mudança de redundância é um processo assíncrono, sem SLA para término. 
         - Pode levar dias ou semanas, dependendo do tamanho da conta e região;
-        - Durante a conversão, os dados permanecem acessíveis sem perda ou tempo de inatividade. 
+        - Durante a conversão, os dados permanecem acessíveis sem perda ou tempo de inatividade.  
+
+    - Tipos de Storage Accounts 
+      - General-Purpose v2 Accounts
+        - Suporta:
+          - Data Lake Gen2 
+          - Blobs 
+          - Files 
+          - Disks
+          - Queues 
+          - Tables 
+        - Entrega o menor preço por gigabyte para Azure Storage.
+
+      - BlobStorage Accounts 
+        - Apenas suporta Blobs Block e Append;
+        - BlobStorage apenas oferta performance padrão. BlockBlobStorage suporta performance premium; 
+        - Legacy BlobStorage está sendo retirado.
+
+      - BlockBlob Storage Accounts 
+        - Providencia latência baixa / consistente, e frequências de transações mais altas; 
+        - Fazendo upgrade De Blob para General v2 não tem tempo de inatividade e não precisa copiar os dados; 
+        - Não suporta níves de acesso: hot, cool, cold e archive; 
+        - Pode ser usado para armazenar dados não estruturadas como block blobs ou append blobs.   
+
+      - FileStorage Accounts 
+        - Apenas suporta compartilhamentos de arquivo; 
+        - Oferece bursting de IOPS 
+
+      |Storage Account | Serviços Suportados | Performances Suportadas | Níveis de Acesso | Replicação | 
+      |----------------|---------------------|-------------------------|------------------|-----------|
+      |General-Purpose V2 |Blob, File, Queue, Table, Disk, Data Lake Gen2 | Standard, Premium | LRS, GRS, RA-GRS, ZRS- GZRS, RA-GZRS | 
     
   </div>
   </details>
