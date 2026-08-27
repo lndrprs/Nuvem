@@ -176,6 +176,35 @@
         - Dedicated (Basic, Standard, Premium e PremiumV2): Quanto maior o nível, mais VMs para dimensionar horizontalmente;
         - Isolated: Uma VM dedicada que providencia dimensionamento horizontal máximo. 
 
+    - Azure Batch 
+      - Serviço de processamento em alta escala de jobs em lote; 
+      - A execução ocorrem em um grupo de VMs Linux ou Windows. 
+
+      - Componentes:
+        - Task: Unidade de Computação;
+        - Job: Conjunto de Tasks;
+        - Job Constraints: Limites para os Jobs;
+        - Scheduled Jobs: Permite criar jobs recorrentes;
+        - Multi-instance task: Simultaneamente executa jobs em mais de um nó de computação; 
+        - Task Dependencies: A tarefa possui dependências das finalizações de tarefas anteriores.
+
+    - Azure Container Instances (ACI)
+      - Execução de Contêineres sem gerenciar servidores; 
+      - Serviço Regional;
+      - As origens das imagens pode ser Quickstart, ACR (Azure Container Registry) e Docker Hub;
+      - Permite montar Azure Files para armazenamento persistente; 
+      
+    - Azure Container Registry (ACR)
+      - Gerenciamento de imagens de contêineres e artefatos relacionados; 
+      - Serviço Regional;
+      - Registros / SKUs são disponíveis em 3 níveis:
+        - Basic;
+        - Standard;
+        - Premium.
+      - Permite usar Geo-Replication para registros Premium;
+      - Azure Container Registry Tasks constrói, testa, insere e provisiona as imagens ao Azure.
+
+
   </div>
   </details>  
 
