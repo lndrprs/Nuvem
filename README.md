@@ -30,7 +30,8 @@
       - General-Purpose (v2 e v1); 
       - BlockBlobStorage; 
       - FileStorage;
-      - BlobStorage. 
+      - Page Blobs
+      - BlobStorage (Legado). 
     - Todas as storage accounts são criptografas usando Storage Service Encryption (SSE), para dados em descanso; 
     - A movimentação de dados entre diferentes storage accounts pode ser  feita automaticamente ou manualmente;
       - Manualmente, pode usar:
@@ -142,6 +143,41 @@
 
   </div>
   </details>
+
+  <details>
+  <summary> 1.2 Compute Services </summary>
+  <div>
+
+    - Azure App Service 
+      - PaaS para desenvolvimento, provisionamento e escalonamento de aplicações Web;
+      - Possui diferentes tipos de Serviços App: 
+        - Web Apps: Aplicações e Websites;
+        - Web Apps for Containers: Aplicações Conteinerizadas;
+        - API Apps: Exposição e Conexão para dados em Backend;
+        - Sidecar Extensions: Contêineres adicionais para aplicação principaç; 
+        - Webjobs on Linux: Tarefas em backgroind junto com aplicações web;
+        - AI/ML Features: Execução de SLMs como sidecars. 
+      - Automaticamente atualiza e mantém o Sistema Operacional e Frameworks de Linguagem;
+      - Pode escalar para cima ou aos lados, manualmente ou automaticamente; 
+      - Suporta as linguagens:
+        - .NET
+        - .NET Core
+        - Java
+        - Ruby
+        - Node.js
+        - PHP
+        - Python
+        - Runtimes Ubuntu 
+
+      - App Service Plan: Conjunto de recursos computacionais necessários para um Web App rodar; 
+      - Cada App Service Plan consiste de uma região, número e tamanho das VMs e Nível de Preço;
+      - Níveis de Preços:
+        - Shared Compute (Free e Shared): Não permite escalar horizontalmente. Possui cotas de CPU;
+        - Dedicated (Basic, Standard, Premium e PremiumV2): Quanto maior o nível, mais VMs para dimensionar horizontalmente;
+        - Isolated: Uma VM dedicada que providencia dimensionamento horizontal máximo. 
+
+  </div>
+  </details>  
 
 </div> 
 </details>
