@@ -204,6 +204,16 @@
       - Permite usar Geo-Replication para registros Premium;
       - Azure Container Registry Tasks constrói, testa, insere e provisiona as imagens ao Azure.
 
+    - Azure CycleCloud
+      - Orquestração e gerenciamento de ambientes de alta performance (HPC);
+      - Permite provisionar infraestrutura para sistemas HPC; 
+      - CycleCloud Agent: Agente instalado em cada VM para prover configuração de nó, sincronização de distribuição e Health Check.  
+
+    - Azure Kubernetes Service (AKS)
+      - Orquestração de gerenciar de muitas imagens e aplicações conteinerizadas; 
+      - Permite provisionar um cluster Kubernetes no Azure; 
+      - Azure Advison fornece recomendações personalizadas em tempo real para otimização.         
+
 
   </div>
   </details>  
