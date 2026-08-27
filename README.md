@@ -210,10 +210,14 @@
       - CycleCloud Agent: Agente instalado em cada VM para prover configuração de nó, sincronização de distribuição e Health Check.  
 
     - Azure Kubernetes Service (AKS)
-      - Orquestração de gerenciar de muitas imagens e aplicações conteinerizadas; 
+      - Orquestração de gerenciar de muitas imagens e aplicações containerizadas; 
       - Permite provisionar um cluster Kubernetes no Azure; 
-      - Azure Advison fornece recomendações personalizadas em tempo real para otimização.         
+      - Azure Advison fornece recomendações personalizadas em tempo real para otimização.   
 
+    - Azure Service Fabric 
+      - Plataforma de sistemas distribuidos, que empacota, provisiona e gerencia microsserviços e contêineres; 
+      - Service Fabric Cluster é um conjunto de VMs nos quais os microsserviços são provisionados e gerenciados. 
+      
 
   </div>
   </details>  
