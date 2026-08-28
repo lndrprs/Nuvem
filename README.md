@@ -147,7 +147,7 @@
          - É possível escolher entre várias que a própria Microsoft gera;
          - Usar Policy Initiatives se precisa de conformidade de alguma indústria específica, como Saúde, Cartões, etc. (Não é dimensionável);
          - Criar sua própria política.
-
+         
     - Policy Scope
       - Podem ser atribuídas em:
         - Management Group;
