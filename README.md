@@ -44,7 +44,7 @@
 		     - Azure Event Hubs Access Key;
 		     - Azure IoT Hub Shared Access Polity
 		 
-	   - Identity-Based: Acesso é permitido para uma identidade do Entra ID.
+     - Identity-Based: Acesso é permitido para uma identidade do Entra ID.
 	     - Exemplos:
 	       - Entra ID App Registration & Enterprise Application;
 	       - User-Assigned Managed Identity;
