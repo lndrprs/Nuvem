@@ -148,23 +148,23 @@
          - Usar Policy Initiatives se precisa de conformidade de alguma indústria específica, como Saúde, Cartões, etc. (Não é dimensionável);
          - Criar sua própria política. 
          
-    - Policy Scope
+     - Policy Scope
       - Podem ser atribuídas em:
         - Management Group;
         - Subscription;
         - Resource Group;
         - Alguns recursos individuais.  
 
-    - Policy Assignment 
+     - Policy Assignment 
       - Atribuição da Policy ao Escopo.     
 
-    - Azure Policy Effect 
+     - Azure Policy Effect 
       - Ação quando a política é violada, por algum recurso não conforme:
         - Audit: Cria um alarme, e não bloqueia o provisionamento;
         - Deny: Bloqueia o provisionamento;
         - Modify: Adiciona, atualiza, ou remove propriedades de provisionamento de recursos. 
 
-      - Nem todos os efeitos são suportados por todas as policies. 
+       - Nem todos os efeitos são suportados por todas as policies. 
 
   </div>
   </details>  
