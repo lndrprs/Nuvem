@@ -22,205 +22,97 @@
 <br>
 
   <details>
-  <summary> 1.1 Storage Accounts </summary>
+  <summary> 1.1 Designing Identity for Azure Solutions </summary>
   <div>
 
-    - Uma conta de Azure Storage contém: Blobs, Files, Queues, Tables e Discos; 
-    - Tipos de Contas de Storage: 
-      - General-Purpose (v2 e v1); 
-      - BlockBlobStorage; 
-      - FileStorage;
-      - Page Blobs
-      - BlobStorage (Legado). 
-    - Todas as storage accounts são criptografas usando Storage Service Encryption (SSE), para dados em descanso; 
-    - A movimentação de dados entre diferentes storage accounts pode ser  feita automaticamente ou manualmente;
-      - Manualmente, pode usar:
-       - AzCopy (CLI utility);
-    	 - Data Movement Library (Projeto para alta performance, confiável, e oprações de transferências fáceis similares ao AzCopy);
-    	 - REST API ou Client Library permite criar uma aplicação customizada para migrar dados. 
-    
-    
-    - Endpoints das Storage Accounts:
-      - Blob Storage:                 https://domínio.BLOB.core.windows.net
-      - Table Storage:                https://domínio.TABLE.core.windows.net
-      - Queue Storage:                https://domínio.QUEUE.core.windows.net
-      - Azure Files:                  https://domínio.FILE.core.windows.net
-      - Azure Data Lake Storage Gen2: https://domínio.DFS.core.windows.net
-    
-      
-    - Níveis de Acesso:
-      - Hot 
-        - Custo de armazenamento mais alto / Menor custo de acesso entre todos os 4;
-    	 - Dados acessados frequentemente;
-    	 - Por padrão, novas Storage Accounts são criadas com Hot Tier. 
-    	 
-      - Cool 
-        - Menor custo de armazenamento, mas maior custo de acesso; 
-    	 - Dados que são acessados infrequentemente (Pelo menos 30 dias);
-    	 - Pode ser usado para backup de curto prazo.
-    	 
-      - Cold 
-        - Menor custo de armazenamento, e mais custo de acesso em comparação ao Cool 
-    	 - Dados que são raramente acessados (Pelo menos 90 dias);
-    	 - Ideal para economia de conjuntos grandes de dados.
-      
-      - Archive
-        - O menor custo de armazenamento, mas o maior custo de recuperação;
-    	 - Dados que são raramente acessos (Pelo menos 180 dias);
-    	 - Dados que precisam ser armazenados por muito tempo. 
-    	 
-      • Políticas de Blob Lifecycle Management podem automatizar as transições entre níveis e expiração baseado em regras; 
-        - Mudanças de políticas podem levar 24 horas para ter efeito;
-        - Custos operacionais padrões são aplicados para chamadas ao Set Blob Tier API. 
-    
-    
-    - Storage Redundancy  	 
-      - Locally Redudant Storage (LRS) 
-        - Baixo Custo;
-    	 - Dados são copiados sincronicamente 3x dentro da região primária.
-    	 
-      - Zone Redudant Storage (ZRS)  
-        - Alta disponibilidade; 
-    	 - Dados são copiados sincronicamente para 3 zonas na região primária.
-    	 
-      - Geo Redundant Storage (GRS)
-        - Redundância Inter-Regional;
-    	 - Dados são copiados em 1 local físico na região primária (LRS), e assincronamente copiado para a região secundária;
-    	 - Habilitar Read-Only Geo-Redundant Storage (RA-GRS), para acessar dados na região secundária. 
-    	 
-      - Geo-Zone-Redundant Storage (GZRS)
-        - Redundância para alta disponibilidade e máxima durabilidade; 
-    	 - Dados são copiados sincronizamente entre 3 zonas na região primária (ZRS), e copiado assincronicamente para a região secundária; 
-    	 - Permite habilitar Read-only Geo Zone Redundant Storage (RA-GZRS), para ler dados na região secundária. 
-    	 
-      - A mudança de redundância é um processo assíncrono, sem SLA para término. 
-        - Pode levar dias ou semanas, dependendo do tamanho da conta e região;
-        - Durante a conversão, os dados permanecem acessíveis sem perda ou tempo de inatividade.  
+   - Microsoft Entra ID (Antigamente: Azure Active Directory)
+   - Gerenciamento em Nuvem de Identidade e Acesso; 
+   - Processo de Controle de Acesso:
+     - Authentication: Verificar quem é o usuário / workload;
+	   - Authorization: Determinar o que o usuário autenticado pode fazer.
+	     - Quais recursos a identidade tem acesso? (Exemplo: Blob Storage);
+	     - Quais ações a identidade pode performar no recurso? (Exemplo: Read, Write, Delete, etc.). 
+	   
 
-    - Tipos de Storage Accounts 
-      - General-Purpose v2 Accounts
-        - Suporta:
-          - Data Lake Gen2 
-          - Blobs 
-          - Files 
-          - Disks
-          - Queues 
-          - Tables 
-        - Entrega o menor preço por gigabyte para Azure Storage.
-
-      - BlobStorage Accounts 
-        - Binary Large Object (BLOb)
-        - Armazena Imagem, Vídeo, Áudio, Logs, Backups, etc; 
-        - Acessível através de REST API, Powershell e Azure CLI; 
-        - Organização via Contêiner, junta blobs similares num diretório. 
-        - Apenas suporta Blobs Block e Append;
-        - BlobStorage apenas oferta performance padrão. BlockBlobStorage suporta performance premium; 
-        - Legacy BlobStorage está sendo retirado.
-
-        - Tipos de Blob:
-          - Block: Binários e Textos até 4.8 TB, blobs maiores até 190.7 TiB 
-          - Append: Ideal para dados de logs de VM's; 
-          - Page: armazena arquivos de acesso aleatório em até 8 TB e arquivos VHD. 
-
-        - Níveis de Acesso:
-          - Hot; 
-          - Cool;
-          - Archive.  
-
-          - Obs.: Permite gerenciamento de ciclo de vida. 
-
-        - Características do Blob 
-          - Permite Versionamento;
-          - Snapshots; 
-          - Replicamento entre Contas; 
-          - Permite Website Estático.
- 
-
-      - FileStorage Accounts 
-        - Apenas suporta compartilhamentos de arquivo; 
-        - Oferece bursting de IOPS 
+   - Opções de Controle de Acesso:
+     - Credential-Based: Acesso é providenciado usando password, key ou token;
+	     - Exemplos:
+	       - Azure SQL User / Password;
+		     - Storage Account Access Key;
+		     - Storage Account SAS Token;
+		     - Cosmos DB Access Key;
+		     - Azure Event Hubs Access Key;
+		     - Azure IoT Hub Shared Access Polity
+		 
+	   - Identity-Based: Acesso é permitido para uma identidade do Entra ID.
+	     - Exemplos:
+	       - Entra ID App Registration & Enterprise Application;
+	       - User-Assigned Managed Identity;
+		     - System-Assigned Managed Identity;
+		     - RBAC for Authorization. 
+	   - Identity-Based é preferencial sob Credential-Based.
+	   
+	 - Tipos de Identidade no Entra ID:
+	   - Humanos: Usuários, Grupos;
+	   - Workloads: Service Principals (App REgistrations, Enterprise Apps, Managed Identities). 
+	   
+   - Azure Role-Based Access Control (Azure RBAC)
+	   - Sistema de autorização que providencia acesso granular à recursos do Azure;
+	   - Para atribuição de RBAC, precisa selecionar: 
+	     - Assignee (Humano ou Workload);
+	     - Role (Função);
+	     - Scope (Recurso).  
+	   
+	 - Funções Embutidas no RBAC (Roles):
+	   - General:
+	     - Owner;
+		   - Contributor;
+		   - Reader;
+		   - User Access Administrator;
+		   - etc.
+		 
+	   - Resource-Specific:
+	     - Storage Blob Data Owner;
+		   - IoT Hub Data Reader; 
+		   - etc. 
+		 
+	 - Escopos do RBAC: 
+	   - Management Groups;
+	   - Subscription;
+	   - Resource Group;
+	   - Individual Resource. 
+	   
+	 - Permite customizar funções / roles via JSON, se as embutidas não servirem. 
+	 
+   - Melhores Práticas para Autenticação 
+     - Não user contas de usuários para Workloads. Criar um Service Principal;
+     - Usar grupos ao invés de atribuir permissões a usuários individualmente; 
+	   - Aplicar sign-in passwordless para usuários (Se aplicável / suportado);
+	   - Proteja recursos usando Conditional Access Policies, e Privileged Identity Management (PIM). 
+	   - Proteja senhas de usuários usando MFA e Identity Protection. 
+	 
+   - Conditional Access Policies 
+     - Políticas de Acesso aplicadas após a autenticação de primeiro-fator é completada com sucesso; 
+	   - As políticas de acesso condicional permitem ou bloqueiam o acesso baseado nas condições definidas. 
+	   - Exemplos:
+	     - Exigir MFA para Dispositivos iOS;
+	     - Bloquear acesso fora de determinado país;
+	     - Exigir Dispositivo em conformidade para Admins. 
+	 
+   - Privileged Identity Management (PIM)
+     - Providencia acesso just-in-time para funções RBAC;
+	   - O acesso é removido após a data de expiração;
+	   - Capacidades: 
+	     - Atribução com prazo definido para funções; 
+	     - Pode exigir aprovação de um Admin para ativar uma função;
+	     - Pode obrigador MFA para ativar uma função;
+	     - Requisita Justificativa para Auditorias Futuras;
+	     - Envia notificações quando uma função é ativada;
+	     - Histórico de Ativação disponível para download, para Auditorias.   
 
 
   </div>
   </details>
-
-  <details>
-  <summary> 1.2 Compute Services </summary>
-  <div>
-
-    - Azure App Service 
-      - PaaS para desenvolvimento, provisionamento e escalonamento de aplicações Web;
-      - Possui diferentes tipos de Serviços App: 
-        - Web Apps: Aplicações e Websites;
-        - Web Apps for Containers: Aplicações Conteinerizadas;
-        - API Apps: Exposição e Conexão para dados em Backend;
-        - Sidecar Extensions: Contêineres adicionais para aplicação principaç; 
-        - Webjobs on Linux: Tarefas em backgroind junto com aplicações web;
-        - AI/ML Features: Execução de SLMs como sidecars. 
-      - Automaticamente atualiza e mantém o Sistema Operacional e Frameworks de Linguagem;
-      - Pode escalar para cima ou aos lados, manualmente ou automaticamente; 
-      - Suporta as linguagens:
-        - .NET
-        - .NET Core
-        - Java
-        - Ruby
-        - Node.js
-        - PHP
-        - Python
-        - Runtimes Ubuntu 
-
-      - App Service Plan: Conjunto de recursos computacionais necessários para um Web App rodar; 
-      - Cada App Service Plan consiste de uma região, número e tamanho das VMs e Nível de Preço;
-      - Níveis de Preços:
-        - Shared Compute (Free e Shared): Não permite escalar horizontalmente. Possui cotas de CPU;
-        - Dedicated (Basic, Standard, Premium e PremiumV2): Quanto maior o nível, mais VMs para dimensionar horizontalmente;
-        - Isolated: Uma VM dedicada que providencia dimensionamento horizontal máximo. 
-
-    - Azure Batch 
-      - Serviço de processamento em alta escala de jobs em lote; 
-      - A execução ocorrem em um grupo de VMs Linux ou Windows. 
-
-      - Componentes:
-        - Task: Unidade de Computação;
-        - Job: Conjunto de Tasks;
-        - Job Constraints: Limites para os Jobs;
-        - Scheduled Jobs: Permite criar jobs recorrentes;
-        - Multi-instance task: Simultaneamente executa jobs em mais de um nó de computação; 
-        - Task Dependencies: A tarefa possui dependências das finalizações de tarefas anteriores.
-
-    - Azure Container Instances (ACI)
-      - Execução de Contêineres sem gerenciar servidores; 
-      - Serviço Regional;
-      - As origens das imagens pode ser Quickstart, ACR (Azure Container Registry) e Docker Hub;
-      - Permite montar Azure Files para armazenamento persistente; 
-      
-    - Azure Container Registry (ACR)
-      - Gerenciamento de imagens de contêineres e artefatos relacionados; 
-      - Serviço Regional;
-      - Registros / SKUs são disponíveis em 3 níveis:
-        - Basic;
-        - Standard;
-        - Premium.
-      - Permite usar Geo-Replication para registros Premium;
-      - Azure Container Registry Tasks constrói, testa, insere e provisiona as imagens ao Azure.
-
-    - Azure CycleCloud
-      - Orquestração e gerenciamento de ambientes de alta performance (HPC);
-      - Permite provisionar infraestrutura para sistemas HPC; 
-      - CycleCloud Agent: Agente instalado em cada VM para prover configuração de nó, sincronização de distribuição e Health Check.  
-
-    - Azure Kubernetes Service (AKS)
-      - Orquestração de gerenciar de muitas imagens e aplicações containerizadas; 
-      - Permite provisionar um cluster Kubernetes no Azure; 
-      - Azure Advison fornece recomendações personalizadas em tempo real para otimização.   
-
-    - Azure Service Fabric 
-      - Plataforma de sistemas distribuidos, que empacota, provisiona e gerencia microsserviços e contêineres; 
-      - Service Fabric Cluster é um conjunto de VMs nos quais os microsserviços são provisionados e gerenciados. 
-      
-
-  </div>
-  </details>  
 
 </div> 
 </details>
