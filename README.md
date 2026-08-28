@@ -173,8 +173,50 @@
   <summary> 1.3 Designing Incident Response and Monitoring For Azure Solutions </summary>
   <div>
 
-   - 
+   - Azure Monitor 
+     - Solução de monitoramento para coletar, analisar e responder dados monitoráveis da nuvem e on-premises; 
+     - Um monitoramento efetivo permite:
+       - Detectar anomalias e divergêcias mais cedo;
+       - Resolver problemas rapidamente; 
+       - Proativamente otimizar workloads; 
+       - Visibilidade de performance dos sistemas; 
+       - Visibilidade na segurança do sistema;
+       - Visibilidade no uso do sistema e custo. 
 
+     - É um grupo de serviços que ajuda a monitorar recursos do Azure;
+     - Coleta métricas, logs, diagnósticos e atividades;
+     - Telemetria de recursos, aplicações e sistemas operacionais. 
+
+     - Opções para Armazenar logs coletados pelo Azure Monitor:
+       - Log Analytics Workspace: Consultar profundas e investigativas, usando KQL;
+       - Storage Account: Para arquivamento a longo prazo; 
+       - Event Hubs: Automatizar resposta a incidentes, usando Functions Apps, Logic Apps, etc. 
+
+     - Diagnostic Settings
+       - Define quais logs e métricas são enviadas para quais destinos. 
+
+   - Azure Monitor Insights:
+     - Application Insights;
+     - Azure VM Insights
+     - Azure Container Insights;
+     - Azure Network Insights;
+     - Azure Storage Insights;
+     - Azure Cosmos DB Insights;
+     - Azure Data Explorer Insights;
+     - Azure Key Vault Insights. 
+
+   - Azure Monitor Alerts:
+     - Os alertas podem ser construídos usando Métricas ou Logs (KQL);
+     - Permite usar Action ou Action Groups para responder a alertas; 
+       - Action Groups: Envio de e-mail, SMS, Webhook, Criação de Ticket em um ITSM;
+     - Pode automatizar a resposta usando Azure Functions ou Logic Apps.
+
+   - Microsoft Sentinel
+     - Cloud-Native SIEM e SOAR que usa IA para providenciar detecção de ameaça, investigação e resposta automatizada;
+     - É desenvolvido no Azure, e integrado com o Microsoft Defender
+       - SIEM: Security Information & Event Management: Centraliza coleção de logs e analytics;
+       - SOAR: Security Orchestration, Automation, and Response: Automatiza respostas à ameaças.
+         
   </div>
   </details>    
 
