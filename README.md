@@ -114,6 +114,70 @@
   </div>
   </details>
 
+  <details>
+  <summary> 1.2 Designing Governance For Azure Solutions </summary>
+  <div>
+
+   - Azure Governance
+     - Controla como os recursos são criados e gerenciados, para entrar em conformidade com o governo indústria e padrões de segurança;
+     - Quanto maior a necessidade de conformidade, menor a agilidade de equipes. 
+
+   - Microsoft Azure Well-Achitected Framework:
+     - Reliability;
+     - Security;
+     - Cost Optimization;
+     - Operational Excellence; 
+     - Performance Efficiency.  
+
+   - Azure Policy 
+     - É ferramenta que compele / força a governança, em escala;
+     - Exemplos de Policy Definitions:
+       - Todas as Storage Accounts devem bloquear acesso público;
+       - Azure Key Vaults devem ter o serviço de Firewall ativo;
+       - Todos os recursos em uma assinatura devem ser provisionados em determinado país;
+       - Usuários não são permitidos para criar VMs de GPU. 
+
+     - Usando Políticas:
+       - Primeiro, encontre a Policy Definition que combine com o requisito;
+       - Depois, decida o escopo onde a Policy precisa controlar; 
+       - Atribua / Assign a Policy Definition ao Escopo. 
+
+     - Policy Definition
+       - Tipos de Policy Definition:
+         - É possível escolher entre várias que a própria Microsoft gera;
+         - Usar Policy Initiatives se precisa de conformidade de alguma indústria específica, como Saúde, Cartões, etc. (Não é dimensionável);
+         - Criar sua própria política. 
+
+    - Policy Scope
+      - Podem ser atribuídas em:
+        - Management Group;
+        - Subscription;
+        - Resource Group;
+        - Alguns recursos individuais.  
+
+    - Policy Assignment 
+      - Atribuição da Policy ao Escopo.     
+
+    - Azure Policy Effect 
+      - Ação quando a política é violada, por algum recurso não conforme:
+        - Audit: Cria um alarme, e não bloqueia o provisionamento;
+        - Deny: Bloqueia o provisionamento;
+        - Modify: Adiciona, atualiza, ou remove propriedades de provisionamento de recursos. 
+
+      - Nem todos os efeitos são suportados por todas as policies. 
+
+  </div>
+  </details>  
+
+  <details>
+  <summary> 1.3 Designing Incident Response and Monitoring For Azure Solutions </summary>
+  <div>
+
+   - 
+
+  </div>
+  </details>    
+
 </div> 
 </details>
 
