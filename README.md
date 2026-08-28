@@ -117,7 +117,7 @@
   <details>
   <summary> 1.2 Designing Governance For Azure Solutions </summary>
   <div>
-````
+```
    - Azure Governance
      - Controla como os recursos são criados e gerenciados, para entrar em conformidade com o governo indústria e padrões de segurança;
      - Quanto maior a necessidade de conformidade, menor a agilidade de equipes. 
