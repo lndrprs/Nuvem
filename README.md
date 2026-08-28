@@ -117,7 +117,7 @@
   <details>
   <summary> 1.2 Designing Governance For Azure Solutions </summary>
   <div>
-
+````
    - Azure Governance
      - Controla como os recursos são criados e gerenciados, para entrar em conformidade com o governo indústria e padrões de segurança;
      - Quanto maior a necessidade de conformidade, menor a agilidade de equipes. 
@@ -147,7 +147,7 @@
          - É possível escolher entre várias que a própria Microsoft gera;
          - Usar Policy Initiatives se precisa de conformidade de alguma indústria específica, como Saúde, Cartões, etc. (Não é dimensionável);
          - Criar sua própria política.
-         
+
     - Policy Scope
       - Podem ser atribuídas em:
         - Management Group;
@@ -165,7 +165,7 @@
         - Modify: Adiciona, atualiza, ou remove propriedades de provisionamento de recursos. 
 
       - Nem todos os efeitos são suportados por todas as policies. 
-
+````
   </div>
   </details>  
 
