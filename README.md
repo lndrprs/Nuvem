@@ -149,20 +149,20 @@
          - Criar sua própria política. 
 
      - Policy Scope
-      - Podem ser atribuídas em:
-        - Management Group;
-        - Subscription;
-        - Resource Group;
-        - Alguns recursos individuais.  
+       - Podem ser atribuídas em:
+         - Management Group;
+         - Subscription;
+         - Resource Group;
+         - Alguns recursos individuais.  
 
      - Policy Assignment 
-      - Atribuição da Policy ao Escopo.     
+       - Atribuição da Policy ao Escopo.     
 
      - Azure Policy Effect 
-      - Ação quando a política é violada, por algum recurso não conforme:
-        - Audit: Cria um alarme, e não bloqueia o provisionamento;
-        - Deny: Bloqueia o provisionamento;
-        - Modify: Adiciona, atualiza, ou remove propriedades de provisionamento de recursos. 
+       - Ação quando a política é violada, por algum recurso não conforme:
+         - Audit: Cria um alarme, e não bloqueia o provisionamento;
+         - Deny: Bloqueia o provisionamento;
+         - Modify: Adiciona, atualiza, ou remove propriedades de provisionamento de recursos. 
 
        - Nem todos os efeitos são suportados por todas as policies. 
 
