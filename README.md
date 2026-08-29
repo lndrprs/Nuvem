@@ -22,203 +22,105 @@
 <br>
 
   <details>
-  <summary> 1.1 Designing Identity for Azure Solutions </summary>
+  <summary> 1.1 Core Architectural Components of Azure </summary>
   <div>
 
-   - Microsoft Entra ID (Antigamente: Azure Active Directory)
-   - Gerenciamento em Nuvem de Identidade e Acesso; 
-   - Processo de Controle de Acesso:
-     - Authentication: Verificar quem é o usuário / workload;
-	   - Authorization: Determinar o que o usuário autenticado pode fazer.
-	     - Quais recursos a identidade tem acesso? (Exemplo: Blob Storage);
-	     - Quais ações a identidade pode performar no recurso? (Exemplo: Read, Write, Delete, etc.). 
-	   
+   - Categorias de Serviços do Azure:
+     - Compute:
+       - Virtual Machines;
+       - App Service;
+       - Azure Functions;
+       - Container Apps;
+       - Azure Kubernetes Service. 
 
-   - Opções de Controle de Acesso:
-     - Credential-Based: Acesso é providenciado usando password, key ou token;
-	     - Exemplos:
-	       - Azure SQL User / Password;
-		     - Storage Account Access Key;
-		     - Storage Account SAS Token;
-		     - Cosmos DB Access Key;
-		     - Azure Event Hubs Access Key;
-		     - Azure IoT Hub Shared Access Polity
-		 
-     - Identity-Based: Acesso é permitido para uma identidade do Entra ID.
-	     - Exemplos:
-	       - Entra ID App Registration & Enterprise Application;
-	       - User-Assigned Managed Identity;
-		     - System-Assigned Managed Identity;
-		     - RBAC for Authorization. 
-	   - Identity-Based é preferencial sob Credential-Based.
-	   
-	 - Tipos de Identidade no Entra ID:
-	   - Humanos: Usuários, Grupos;
-	   - Workloads: Service Principals (App REgistrations, Enterprise Apps, Managed Identities). 
-	   
-   - Azure Role-Based Access Control (Azure RBAC)
-	   - Sistema de autorização que providencia acesso granular à recursos do Azure;
-	   - Para atribuição de RBAC, precisa selecionar: 
-	     - Assignee (Humano ou Workload);
-	     - Role (Função);
-	     - Scope (Recurso).  
-	   
-	 - Funções Embutidas no RBAC (Roles):
-	   - General:
-	     - Owner;
-		   - Contributor;
-		   - Reader;
-		   - User Access Administrator;
-		   - etc.
-		 
-	   - Resource-Specific:
-	     - Storage Blob Data Owner;
-		   - IoT Hub Data Reader; 
-		   - etc. 
-		 
-	 - Escopos do RBAC: 
-	   - Management Groups;
-	   - Subscription;
-	   - Resource Group;
-	   - Individual Resource. 
-	   
-	 - Permite customizar funções / roles via JSON, se as embutidas não servirem. 
-	 
-   - Melhores Práticas para Autenticação 
-     - Não user contas de usuários para Workloads. Criar um Service Principal;
-     - Usar grupos ao invés de atribuir permissões a usuários individualmente; 
-	   - Aplicar sign-in passwordless para usuários (Se aplicável / suportado);
-	   - Proteja recursos usando Conditional Access Policies, e Privileged Identity Management (PIM). 
-	   - Proteja senhas de usuários usando MFA e Identity Protection. 
-	 
-   - Conditional Access Policies 
-     - Políticas de Acesso aplicadas após a autenticação de primeiro-fator é completada com sucesso; 
-	   - As políticas de acesso condicional permitem ou bloqueiam o acesso baseado nas condições definidas. 
-	   - Exemplos:
-	     - Exigir MFA para Dispositivos iOS;
-	     - Bloquear acesso fora de determinado país;
-	     - Exigir Dispositivo em conformidade para Admins. 
-	 
-   - Privileged Identity Management (PIM)
-     - Providencia acesso just-in-time para funções RBAC;
-	   - O acesso é removido após a data de expiração;
-	   - Capacidades: 
-	     - Atribução com prazo definido para funções; 
-	     - Pode exigir aprovação de um Admin para ativar uma função;
-	     - Pode obrigador MFA para ativar uma função;
-	     - Requisita Justificativa para Auditorias Futuras;
-	     - Envia notificações quando uma função é ativada;
-	     - Histórico de Ativação disponível para download, para Auditorias.   
+     - Networking: 
+       - Virtual Network;
+       - Load Balancer;
+       - VPN Gateway;
+       - ExpressRoute;
+       - Azure DNS.
+
+     - Storage:
+       - Blob Storage;
+       - Azure Files;
+       - Queue Storage;
+       - Table Storage;
+       - Managed Disks. 
+
+     - Databases:
+       - Azure SQL;
+       - Azure Cosmos DB;
+       - PostgreSQL Flex;
+       - MySQL Flex;
+       - Redis Cache. 
+
+     - AI + ML:
+       - Azure OpenAI;
+       - AI Services;
+       - Machine Learning; 
+       - Bot Service;
+       - AI Search. 
+
+     - Identity + Security:
+       - Microsoft Entra ID;
+       - Key Vault;
+       - Defender for Cloud;
+       - DDoS Protection;
+       - Firewall. 
+
+     - DevOps + Management:
+       - Azure DevOps;
+       - Azure Monitor;
+       - ARM Template;
+       - Azure Policy;
+       - Cost Management. 
+
+     - IoT:
+       - IoT Hub; 
+       - IoT Central;
+       - Digital Twins;
+       - Stream Analytics;
+       - Event Hubs. 
+
+     - Analytics:
+       - Synapse Analytics;
+       - Data Factory;
+       - Databricks;
+       - HDInsight;
+       - Azure Data Explorer. 
+
+     - Integration:
+       - Logic Apps; 
+       - API Management;
+       - Service Bus;
+       - Event Grid;
+       - Notification Hubs. 
+
+   - Azure Accounts
+     - O primeiro passo para utilizar recursos na Azure, é possuir uma conta; 
+     - Dentro da conta, você terá as assinaturas / subscrições;
+     - Dentro das assinaturas, você tem os Resource Groups / Grupos de Recursos;
+     - Dentro dos Resources Groups, você tem os Recursos.
+
+     - Azure Account -> Subscription -> Resource Groups -> Resources. 
+
+   - Azure Physical Infrastructure
+     - A infraestrutura do Azure começa com os Datacenters; 
+     - Os datacenters são servidores organizados em racks, com energia dedicada, resfriamento e infraestrutura de rede; 
+     - Existem datacenter ao redor do mundo, e são agrupador em Azure Regions e Azure Availability Zones, que providenciam resiliência e confiabilidade. 
+
+     - Geografia -> Region -> Availability Zone -> Datacenter.       
+
+     - Region: Área no planeta que possui pelo menos 1, mas múltiplos datacenters que estão próximos e interligados com baixa latência;
+     - Availability Zone: Datacenters separados fisicamente dentro do Azure Region. Cada região possui 1 ou mais datacenters.
+
+   - Observações:
+     - Recursos só podem pertencer a um Resource Group ao mesmo tempo;
+     - Quando uma ação ou configuração é feita em um Resource Group, os recursos atuais e futuros herdam essa configuração.
 
 
   </div>
   </details>
-
-  <details>
-  <summary> 1.2 Designing Governance For Azure Solutions </summary>
-  <div>
-
-   - Azure Governance
-     - Controla como os recursos são criados e gerenciados, para entrar em conformidade com o governo indústria e padrões de segurança;
-     - Quanto maior a necessidade de conformidade, menor a agilidade de equipes. 
-
-   - Microsoft Azure Well-Achitected Framework:
-     - Reliability;
-     - Security;
-     - Cost Optimization;
-     - Operational Excellence; 
-     - Performance Efficiency.  
-
-   - Azure Policy 
-     - É ferramenta que compele / força a governança, em escala;
-     - Exemplos de Policy Definitions:
-       - Todas as Storage Accounts devem bloquear acesso público;
-       - Azure Key Vaults devem ter o serviço de Firewall ativo;
-       - Todos os recursos em uma assinatura devem ser provisionados em determinado país;
-       - Usuários não são permitidos para criar VMs de GPU. 
-
-     - Usando Políticas:
-       - Primeiro, encontre a Policy Definition que combine com o requisito;
-       - Depois, decida o escopo onde a Policy precisa controlar; 
-       - Atribua / Assign a Policy Definition ao Escopo. 
-
-     - Policy Definition
-       - Tipos de Policy Definition:
-         - É possível escolher entre várias que a própria Microsoft gera;
-         - Usar Policy Initiatives se precisa de conformidade de alguma indústria específica, como Saúde, Cartões, etc. (Não é dimensionável);
-         - Criar sua própria política. 
-
-     - Policy Scope
-       - Podem ser atribuídas em:
-         - Management Group;
-         - Subscription;
-         - Resource Group;
-         - Alguns recursos individuais.  
-
-     - Policy Assignment 
-       - Atribuição da Policy ao Escopo.     
-
-     - Azure Policy Effect 
-       - Ação quando a política é violada, por algum recurso não conforme:
-         - Audit: Cria um alarme, e não bloqueia o provisionamento;
-         - Deny: Bloqueia o provisionamento;
-         - Modify: Adiciona, atualiza, ou remove propriedades de provisionamento de recursos. 
-
-       - Nem todos os efeitos são suportados por todas as policies. 
-
-  </div>
-  </details>  
-
-  <details>
-  <summary> 1.3 Designing Incident Response and Monitoring For Azure Solutions </summary>
-  <div>
-
-   - Azure Monitor 
-     - Solução de monitoramento para coletar, analisar e responder dados monitoráveis da nuvem e on-premises; 
-     - Um monitoramento efetivo permite:
-       - Detectar anomalias e divergêcias mais cedo;
-       - Resolver problemas rapidamente; 
-       - Proativamente otimizar workloads; 
-       - Visibilidade de performance dos sistemas; 
-       - Visibilidade na segurança do sistema;
-       - Visibilidade no uso do sistema e custo. 
-
-     - É um grupo de serviços que ajuda a monitorar recursos do Azure;
-     - Coleta métricas, logs, diagnósticos e atividades;
-     - Telemetria de recursos, aplicações e sistemas operacionais. 
-
-     - Opções para Armazenar logs coletados pelo Azure Monitor:
-       - Log Analytics Workspace: Consultar profundas e investigativas, usando KQL;
-       - Storage Account: Para arquivamento a longo prazo; 
-       - Event Hubs: Automatizar resposta a incidentes, usando Functions Apps, Logic Apps, etc. 
-
-     - Diagnostic Settings
-       - Define quais logs e métricas são enviadas para quais destinos. 
-
-   - Azure Monitor Insights:
-     - Application Insights;
-     - Azure VM Insights
-     - Azure Container Insights;
-     - Azure Network Insights;
-     - Azure Storage Insights;
-     - Azure Cosmos DB Insights;
-     - Azure Data Explorer Insights;
-     - Azure Key Vault Insights. 
-
-   - Azure Monitor Alerts:
-     - Os alertas podem ser construídos usando Métricas ou Logs (KQL);
-     - Permite usar Action ou Action Groups para responder a alertas; 
-       - Action Groups: Envio de e-mail, SMS, Webhook, Criação de Ticket em um ITSM;
-     - Pode automatizar a resposta usando Azure Functions ou Logic Apps.
-
-   - Microsoft Sentinel
-     - Cloud-Native SIEM e SOAR que usa IA para providenciar detecção de ameaça, investigação e resposta automatizada;
-     - É desenvolvido no Azure, e integrado com o Microsoft Defender
-       - SIEM: Security Information & Event Management: Centraliza coleção de logs e analytics;
-       - SOAR: Security Orchestration, Automation, and Response: Automatiza respostas à ameaças.
-         
-  </div>
-  </details>    
 
 </div> 
 </details>
