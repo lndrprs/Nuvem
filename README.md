@@ -146,12 +146,33 @@
        - Size: Propósito, número de núcleos de processamento, quantidade de RAM;
        - Storage Disks: HDD, SSD, etc.;
        - Networking: VNet, Public IP, Configuração de Porta. 
+       - Cada VM permite customizar as opções:
+         - vCPU: Afeta a capacidade de processamento;
+         - RAM: Afeta quantos dados ficam na memória da VM;
+         - Disk: Afeta capacidade de Armazenamento, IOPS e Vazão; 
+         - Network: Performance da transferência para a VM e Fora dela; 
+         - Premium SSD: Indica se suporta discos premiums gerenciáveis;
+         - Generation: Indica a geração da plataforma e pode afetar performance base. 
+
+       - Leitura de Nomes:
+         - Standard_D2s_v5 
+           - D = Família;
+           - 2 = vCPUs;
+           - s = Disco Premium.
+           - v5 = Geração do Hardware. 
 
      - Famílias de VMs  
   
-     | Letra | Descrição | Foco | Exemplos |
-     |-------|-----------|------|----------|
-     | B | Bustable | Expansível e Econômico | Workloads de Dev. / Test com Picos de CPU ocasionais |
+     | Letra |  Foco | Exemplos |
+     |-------|-------|----------|
+     | B - Bustable | Expansível e Econômico | Workloads de Dev. / Test com Picos de CPU ocasionais |
+     | D - General  | Propósitos Gerais | Servidores Web, Servidores de Aplicações Pequenas - Medianas | 
+     | E - Memory   | Otimizado para Memória | Bancos de Dados em Memória, Workloads de Analytics | 
+     | F - Compute  | Otimizado para Computação | Aplicações de uso intensivo de CPU |
+     | M - Large Memory | Alto Consumo de Memória | Bancos de Dados Empresariais | 
+     | L - Storage  | Otimizado para Armazenamento | Alto desempenho para processamento de Dados e Armazenamento |
+     | N - GPU      | GPU Ativada | Treinamento de IA e Workloads de Gráficos |  
+  
 
   </div>
   </details>   
