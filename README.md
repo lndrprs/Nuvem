@@ -193,10 +193,23 @@
   <summary> 1.3 Azure Virtual Desktop </summary>
   <div>
 
-   - 
+   - Serviço de Aplicação e Virtualização no Azure; 
+   - Permite os usuários acessarem, com segurança, Windows Desktops e aplicações atarvés de dispositivos e locais;
+   - Ao invés das informações ficarem no dispositivo físico, ficam na nuvem. 
+   - É integrado com o Microsoft Entra ID para controle de acesso e identidade; 
+   - Ajuda a reduzir exposição de dados em dispositivos locais.
 
   </div>
   </details>        
+
+  <details>
+  <summary> 1.4 Azure Containers </summary>
+  <div>
+
+   - 
+
+  </div>
+  </details>     
 
 </div> 
 </details>
