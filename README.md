@@ -148,6 +148,7 @@
        - Networking: VNet, Public IP, Configuração de Porta. 
 
      - Famílias de VMs 
+     
      | Letra | Descrição | Foco | Exemplos |
      |-------|-----------|------|----------|
      | B | Bustable | Expansível e Econômico | Workloads de Dev. / Test com Picos de CPU ocasionais |
