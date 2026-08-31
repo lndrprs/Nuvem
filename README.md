@@ -143,12 +143,12 @@
        - Lift and Shift Migration: Move Workloads existentes com reformulação mínima de aplicação. 
 
      - Recursos e Tamanhos
-       - Size: Propósito, número de números de processamento, quantidade de RAM;
+       - Size: Propósito, número de núcleos de processamento, quantidade de RAM;
        - Storage Disks: HDD, SSD, etc.;
        - Networking: VNet, Public IP, Configuração de Porta. 
 
-     - Famílias de VMs 
-     
+     - Famílias de VMs  
+  
      | Letra | Descrição | Foco | Exemplos |
      |-------|-----------|------|----------|
      | B | Bustable | Expansível e Econômico | Workloads de Dev. / Test com Picos de CPU ocasionais |
