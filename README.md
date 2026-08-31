@@ -122,6 +122,39 @@
   </div>
   </details>
 
+  <details>
+  <summary> 1.2 Azure Compute Services </summary>
+  <div>
+
+   - Azure Virtual Machines
+     - Servidores Virtualizados no Azure, como IaaS; 
+     - Assim como um servidor físico, o cliente controla o sistema operacional e o software instalado;
+     - Fácil provisionamento através de imagens já predefinidas;
+     - Boas opções, quando:
+       - Precisa de controle total sob Sistema Operacional;
+       - Executar softwares Customizados;
+       - Configurações Customizadas. 
+
+     - Casos de Uso para VMs:
+       - Teste e Desenvolvimento: Diferentes Sistemas Operacionais e Configurações de Aplicações;
+       - Hospedagem em Nuvem: Dimensionamento conforme demanda;
+       - Extensão de Datacenter: Estende a rede on-premises no Azure, e hospeda as cargas de trabalho em uma VNet;
+       - Disaster Recovery: Mantém capacidade failover no Azure e executa workloads críticos se o site primário estiver indisponível;
+       - Lift and Shift Migration: Move Workloads existentes com reformulação mínima de aplicação. 
+
+     - Recursos e Tamanhos
+       - Size: Propósito, número de números de processamento, quantidade de RAM;
+       - Storage Disks: HDD, SSD, etc.;
+       - Networking: VNet, Public IP, Configuração de Porta. 
+
+     - Famílias de VMs 
+     | Letra | Descrição | Foco | Exemplos |
+     |-------|-----------|------|----------|
+     | B | Bustable | Expansível e Econômico | Workloads de Dev. / Test com Picos de CPU ocasionais |
+
+  </div>
+  </details>   
+
 </div> 
 </details>
 
