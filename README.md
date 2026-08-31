@@ -173,9 +173,30 @@
      | L - Storage  | Otimizado para Armazenamento | Alto desempenho para processamento de Dados e Armazenamento |
      | N - GPU      | GPU Ativada | Treinamento de IA e Workloads de Gráficos |  
   
+     - Virtual Machine Scale Sets 
+       - Permite Criar e Gerenciar grupos de VMs idênticas, e com balanceamento de carga; 
+       - Centraliza a configuração e pode automaticamente dimensionar horizontalmente sob demanda ou agendamento; 
+       - Também é integrado com balanceamento de carga, então o tráfego é distribuído eficientemente. 
+
+     - Virtual Machine Availability Sets 
+       - Melhora a resiliência da VM dentro de uma região; 
+       - Reduz a chance de todas as VMs serem afetadas por uma manutenção ou falha de hardware; 
+       - Availability Sets são divididos em dois grupos:
+         - Update Domain: VMs que podem ser reiniciadas juntas durante a manutenção planejada;
+         - Fault Domain: VMs que um ponto de falha em energia ou rede; 
+       - É uma redundância em nível de VM. 
 
   </div>
   </details>   
+
+  <details>
+  <summary> 1.3 Azure Virtual Desktop </summary>
+  <div>
+
+   - 
+
+  </div>
+  </details>        
 
 </div> 
 </details>
