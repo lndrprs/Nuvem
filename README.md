@@ -273,7 +273,7 @@
   </details>  
 
   <details>
-  <summary> 2.1 Azure App Service </summary>
+  <summary> 2.1 Storage Accounts </summary>
   <div>
 
    - 
