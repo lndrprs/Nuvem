@@ -276,11 +276,98 @@
   <summary> 2.1 Storage Accounts </summary>
   <div>
 
-   - 
+   - Storage Account 
+     - Único namespace para seus dados no Azure, acessível de qualquer lugar no mundo através de HTTP / HTTPS; 
+     - Os dados nessa conta são protegidos, altamente disponíveis, duráveis e massivamente dimensionáveis; 
+     - Ao criar a conta, precisa escolher qual tipo de conta deseja;
+     - O tipo de conta define os serviços de armazenamento e as opções de redundância, tendo impacto em casos de uso. 
+
+     - Tipos:
+       - Standard General-Purpose v2 
+         - Serviços Suportados:
+           - Blob Storage (Incluindo Data Lake Storage);
+           - Queue Storage;
+           - Table Storage; 
+           - Azure Files.
+         - Redundâncias Suportadas:
+           - LRS; 
+           - GRS; 
+           - RA-GRS;
+           - ZRS;
+           - GZRS;
+           - RA-GZRS. 
+         - Padrão de armazenamento para blobs, file shares, queues e tables; 
+         - Recomendado para a maioria dos cenários usando Azure Storage;
+         - Caso seja necessário utilizar NFS (Network File System) em Azure Files, usar o Premium File Shares. 
+
+      - Premium Block Blobs
+        - Serviço Suportado:
+          Blob Storage (Incluindo Data Lake Storage).
+        - Redundância Suportadas:
+          - LRS;
+          - ZRS.
+        - Para Block Blobs e Append Blobs; 
+        - Recomendado para cenários com alta frequência de transações / baixa latência ou que usam objetos pequenos.
+
+      - Premium File Shares 
+        - Serviço Suportado:
+          - Azure Files 
+        - Redundâncias Suportadas:
+          - LRS;
+          - ZRS. 
+        - Recomendado para alto dimensionamento de aplicações ou alta performance; 
+        - Storage account que permite SMB e NFS como compartilhamento de arquivos. 
+
+      - Premium Page Blobs 
+        - Serviços Suportados:
+          - Page Blobs; 
+        - Redundância Suportada:
+          - LRS.
+        - Storage Account para Page Blobs apenas (Como VM Disks).
+
+   - Endpoints 
+     - Blob Storage: https://(nome).blob.core.windows.net
+     - Data Lake Storage Gen2: https://(nome).dfs.core.windows.net
+     - Azure Files: https://(nome).file.core.windows.net
+     - Queue Storage: https://(nome).queue.core.windows.net
+     - Table Storage: https://(nome).table.core.windows.net
+
+  </div>
+  </details>               
+
+  <details>
+  <summary> 2.2 Azure Storage Redundancy </summary>
+  <div>
+
+   - Redundancy 
+     - Azure Storage mantém múltiplas cópias dos dados para proteger contra falhas de hardware, energia e desastres regionais;
+     - As opções de redundância determinam disponibilidade, durabilidade e custos;
+     - Ao escolher a redundância, balancear o menor custo com a maior disponibilidade;
+     - Fatores para consideração:
+       - Como os dados são replicados na região primária;
+       - Se os dados são replicados para uma segunda região, geograficamente distante da primeira, para proteção contra desastres;
+       - Se a aplicação querer leitura de dados replicados na segunda região, se a primeira estiver indisponível. 
+
+     - Redundância na Região Primária 
+       - Os dados são sempre replicados 3x na região primária; 
+       - Opções:
+         - Locally Redundant Storage (LRS):
+           - Replica os dados 3x dentro de um data center na região primária; 
+           - Possui 11 9's (99.999999999%) 
+           - É a opção mais barata, e prote contra falhas de rack de servidores e drives;
+
+         - Zone-Redundant Storage (ZRS):
+           - Replica os dados sincronizadamente através de 3 zonas de disponibilidade na região primária;
+           - Possui durabilidade de 12 9's (99.9999999999%)
+           - Os dados ficam disponíveis para leitura e escrita mesmo que uma zona esteja indisponível;
+           - Azure performa atualizações de redes, como reapontamento de DNS. 
+
+     - Redundância na Região Secundária 
+       -        
      
 
   </div>
-  </details>                  
+  </details>       
 
 
 </div> 
