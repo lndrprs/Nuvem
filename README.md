@@ -123,7 +123,7 @@
   </details>
 
   <details>
-  <summary> 1.2 Azure Compute Services </summary>
+  <summary> 1.2 Azure Virtual Machines </summary>
   <div>
 
    - Azure Virtual Machines
@@ -194,10 +194,10 @@
   <div>
 
    - Serviço de Aplicação e Virtualização no Azure; 
-   - Permite os usuários acessarem, com segurança, Windows Desktops e aplicações atarvés de dispositivos e locais;
-   - Ao invés das informações ficarem no dispositivo físico, ficam na nuvem. 
-   - É integrado com o Microsoft Entra ID para controle de acesso e identidade; 
-   - Ajuda a reduzir exposição de dados em dispositivos locais.
+     - Permite os usuários acessarem, com segurança, Windows Desktops e aplicações atarvés de dispositivos e locais;
+     - Ao invés das informações ficarem no dispositivo físico, ficam na nuvem. 
+     - É integrado com o Microsoft Entra ID para controle de acesso e identidade; 
+     - Ajuda a reduzir exposição de dados em dispositivos locais.
 
   </div>
   </details>        
@@ -229,10 +229,30 @@
   <summary> 1.5 Azure Functions </summary>
   <div>
 
-   - 
+   - Functions 
+     - Processamento baseado em evento, serverless, que não requer VMs ou Contêineres; 
+     - Um evento "ativa" as Functions, como uma requisição REST, um Timer ou Mensagem de outro serviço Azure; 
+     - Podem ser dimensionadas automaticamente, baseadas em demanda;
+     - Azure cobra apenas pelo tempo de CPU usado enquanto a Function roda;
+     - Existem dois tipos de Functions:
+       - Stateless: Reinicia sempre que responde a um evento;
+       - Stateful: Tem um contexto da atividade anterior. 
+
+  </div>
+  </details> 
+
+  <details>
+  <summary> 1.6 IoT and Edge Services </summary>
+  <div>
+
+   - IoT Services 
+     - IoT Hub: Permite comunicação segura e bi-direcional entre serviços da nuvem e dispositivos IoT;
+     - IoT Central: Plataforma SaaS para construção de Soluções; 
+     - IoT Edge: Estende as capacidades da nuvem para dispositivos edge, executando alguns workloads mais próximos de onde os dados são gerados. 
 
   </div>
   </details>       
+
 
 </div> 
 </details>
