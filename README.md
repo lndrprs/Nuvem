@@ -206,10 +206,33 @@
   <summary> 1.4 Azure Containers </summary>
   <div>
 
-   - 
+   - Contêineres 
+     - São usados para arquiteturas de microsserviços; 
+     - Nessa arquitetura, as soluções são separadas em partes independentes:
+       - Um contêiner hospeda o front end, outro o back end e outro o armazzenamento; 
+       - Separando dessa forma, permite manter, dimensionar, ou atualizar cada parte da aplicação, independentemente. 
+
+   - Azure Container Instances 
+     - A forma mais rápida e simples de executar contêineres na nuvem, sendo PaaS.
+     
+   - Azure Container Apps
+     - Também é um serviço PaaS, mas possui Balanceador de Carga e Dimensionamento;
+     - O projeto pode se adaptar a mudança de demanda. 
+
+   - Azure Kubernetes Service 
+     - Orquestração de Contêineres, que gerencia o ciclo de vida de contêineres. 
 
   </div>
   </details>     
+
+  <details>
+  <summary> 1.5 Azure Functions </summary>
+  <div>
+
+   - 
+
+  </div>
+  </details>       
 
 </div> 
 </details>
