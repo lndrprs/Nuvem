@@ -253,6 +253,35 @@
   </div>
   </details>       
 
+  <details>
+  <summary> 1.7 Azure App Service </summary>
+  <div>
+
+   - App Service 
+     - É um serviço baseado em HTTP;
+     - Permite criar e hospedar na linguagem que deseja, sem infraestrutura:
+       - Web Apps; 
+       - API apps;
+       - WebJobs;
+       - Background Jobs; 
+       - Mobile Back-Ends; 
+     - Oferece alta disponibilidade e dimensionamento automático; 
+     - Suporta Windows e Linux, e também provisionamentos automáticos do GitHub, Azure DevOps ou qualquer repositório Git; 
+     
+
+  </div>
+  </details>  
+
+  <details>
+  <summary> 2.1 Azure App Service </summary>
+  <div>
+
+   - 
+     
+
+  </div>
+  </details>                  
+
 
 </div> 
 </details>
