@@ -484,10 +484,33 @@
   <summary> 3.2 Azure External Identities </summary>
   <div>
 
-   - 
+   - External Identity
+     - Pessoa, Dispositivo ou Serviço que existe fora do seu Tenant;
+     - Organizações precisam colaborar com parceiros, fornecedores, vendedores e contratados; 
+     - Essas identidades externas podem usar seus recursos com as credenciais existentes deles. 
+
+   - External ID Capabilities 
+     - B2B Collaboration: Usuários externos se conectam nas suas aplicações como Guest Users;
+     - B2B Direct Connect: Conectividade entre o seu tenant, e o do parceiro; 
+     - External ID For Customers (B2C): Publicação de aplicações SaaS ou customizadas para clientes / consumidores. 
 
   </div>
   </details>      
+
+  <details>
+  <summary> 3.3 Azure Conditional Access </summary>
+  <div>
+
+   - Ferramenta do Entra ID que permite / nega acessos a recursos se baseando em sinais de identidade; 
+   - Esses sinais incluem: 
+     - Usuário ou Grupo a que pertence;
+     - Local do IP;
+     - Dispositivo;
+     - Aplicação alvo;
+     - Risco em tempo real de Entrada. 
+
+  </div>
+  </details>        
 
 
 
