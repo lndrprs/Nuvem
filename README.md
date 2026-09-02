@@ -437,7 +437,23 @@
   <summary> 2.5 Azure File Movement Options </summary>
   <div>
 
-   - 
+   - AzCopy 
+     - Utilidade CLI que copia Blobs ou Arquivo de / para sua Storage Account;
+     - Permite fazer upload de arquivos, download, copiar entre storage accounts, e até sincronizar arquivos;
+     - Blobs ou Files possui sincronização unilateral, definindo a origem e destino, e o AzCopy é executado nessa direção. 
+
+   - Storage Explorer
+     - Aplicação que providencia uma GUI para gerenciamento de arquivos e blobs na Azure Storage Account; 
+     - Funciona no Windows, macOS e Linux, e usa o AzCopy como backend para performar as tarefas. 
+
+   - Azure File Sync 
+     - Ferramenta que permite centralizar File Shares no Azure Files, mantendo a flexibilidade, performance e compatibilidade do Windows File Server; 
+     - Como se fosse transformar o File Server em uma CDN - Content Delivery Network; 
+     - Assim que instalar o File Sync no Windows Server, automaticamente fica sincronizado bidirecionalmente com os arquivos no Azure; 
+     - Características:
+       - Usar qualquer protocolo disponível no Windows Server para acessar seus dados localmente, incluindo SMB, NFS e FTPS;
+       - Ter quantos caches precisar, no mundo todo;
+       - Substituir um servidor que falhou, instalando o Azure File Sync em um novo servidor no mesmo datacenter.
 
   </div>
   </details>       
