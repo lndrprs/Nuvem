@@ -363,11 +363,63 @@
            - Azure performa atualizações de redes, como reapontamento de DNS. 
 
      - Redundância na Região Secundária 
-       -        
+       - Quando você cria uma Storage Account, você escolhe a região primária. Azure atribui a região secundária emparelhada em pares de regiões;
+       - Por padrão, dados de região secundária não são legíveis até que ocorra o failover. Se a região primária está indisponível, você pode fazer o fail, assim a região secundária vira a primária.
+       - O intervalo entre a escrita mais recente na região primária e a última escrita na secundária é RPO - Recovery Point Objective;
+         - O RPO indica o ponto no tempo onde os dados podem ser recuperados; 
+         - Normalmente Azure Storage possui um RPO de menos de 15 minutos, mas não há um SLA de quanto tempo leva para replicar os dados à região secundária. 
+       - Opções:
+         - Geo-Redundant Storage (GRS)
+           - Copia os dados 3x na região primária (LRS) e assincronicamente para a região secundária (LRS)      
+           - Provê 16 9's no Ano. 
+
+         - Geo-Zone-Redundant Storage (GZRS)
+           - Os dados são copias em 3 zonas na região primária, e replicados para a secundária usando LRS (3x no Datacenter distante - LRS)
+
+       - Para ler os dados na região secundária antes do failover, precisa ativar o RA-GRS: Read Access Geo-Redundant Storage, ou RA-GZRS.  
      
 
   </div>
   </details>       
+
+  <details>
+  <summary> 2.3 Storage Services </summary>
+  <div>
+
+   - Azure Storage inclui esses serviços de dados:
+
+     - Azure Blobs: Armazenamento de objetos massivamente escalável, para texto, dados binários e big data analytics (Data Lake Storage Gen2);
+       - Níveis de Armazenamento:
+         - Hot Access Tier: Dados acessados frequentemente;
+         - Cool Access Tier: Dados acessados infrequentemente, no mínimo 30 dias;
+         - Cold Access Tier: Dados acessados infrequentemente, no mínimo 90 dias;
+         - Archive Access Tier: Dados raramente acessados, no mínimo 180 dias. 
+
+     - Azure Files: File Shares gerenciáveis para Cloud ou On-Premises;
+       - Oferece file shares na nuvem que são acessíveis via SMB ou NFS;
+       - Podem ser montados simultaneamente por provisionamentos em nuvem ou on-premises.
+
+     - Azure Queues: Armazenamento de mensagens entre componentes de aplicação;
+       - Queues são acessados por chamadas HTTP/HTTPS;
+       - Armazena mensagens até 64 KB;
+       - Comumente emparelhado com Azure Functions, para mensagens ativarem ações em background. 
+
+     - Azure Disks: Volumes de Armazenamento em nível de Block, para VMs do Azure;
+     - Azure Tables: tabela NoSQL para dados não relacionais.
+
+  </div>
+  </details>       
+
+  <details>
+  <summary> 2.4 Data Migration Options </summary>
+  <div>
+
+   - 
+
+  </div>
+  </details>       
+
+
 
 
 </div> 
