@@ -414,10 +414,34 @@
   <summary> 2.4 Data Migration Options </summary>
   <div>
 
+   - Azure Migrate 
+     - Migra de ambientes On-Premises para a Nuvem; 
+     - Funciona como um Hub, ajudando a gerenciar e avaliar a migração ao Azure:
+     - Funcionalidades:
+       - Um portal para começar, executar e rastrear a migração ao Azure;
+       - Possui o Azure Migrate: Discovery e o Azure Migrate: Server Migration;
+
+   - Azure Data Box 
+     - Serviço físico de migração, que transfere grandes quantidades de dados ao dispositivo de storage Data Box; 
+     - Esse dispositivo tem a capacidade de 80 TBs; 
+     - Pode ser usado para importar ou exportar dados do Azure; 
+     - Normalmente usado quando a banda de rede é limitada.
+       - Cenários:
+         - Migração em massa, de uma vez, dos dados locais ao Azure;
+         - Quando a transferência Online é muito demorada.
+
+  </div>
+  </details>       
+
+  <details>
+  <summary> 2.5 Azure File Movement Options </summary>
+  <div>
+
    - 
 
   </div>
   </details>       
+
 
 
 
