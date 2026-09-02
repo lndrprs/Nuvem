@@ -458,7 +458,36 @@
   </div>
   </details>       
 
+  <details>
+  <summary> 3.1 Azure Identity, Access and Security </summary>
+  <div>
 
+   - Azure Authentication Methods 
+     
+     - Single Sign-On
+       - Permite o usuário entrar uma vez, e acessar múltiplas aplicações confiáveis.
+
+     - Multifactor Authentication
+       - Incita o usuário por um fator extra durante o processo de entrada. Uma senha não é o suficiente para acesso.
+
+     - Passwordless Authentication
+       - Elimina a senha completamente, substituindo com um dispositivo confiável e uma biometria ou PIN; 
+       - Microsoft Entra ID suporta 3 opções passwordless:
+         - Windows Hello for Business: Credenciais usadas no próprio Windows, sendo biometria ou PIN;
+         - Microsoft Authenticator App: Usado para confirmar a entrada;
+         - FIDO2 Security Keys: Dispositivos que possuem USB, Bluetooth ou NFC. 
+
+  </div>
+  </details>    
+
+  <details>
+  <summary> 3.2 Azure External Identities </summary>
+  <div>
+
+   - 
+
+  </div>
+  </details>      
 
 
 
