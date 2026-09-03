@@ -131,7 +131,7 @@
      - Assim como um servidor físico, o cliente controla o sistema operacional e o software instalado;
      - Fácil provisionamento através de imagens já predefinidas;
      - Boas opções, quando:
-       - Precisa de controle total sob Sistema Operacional;
+       - Precisa de controle total sobre o Sistema Operacional;
        - Executar softwares Customizados;
        - Configurações Customizadas. 
 
@@ -175,7 +175,7 @@
   
      - Virtual Machine Scale Sets 
        - Permite Criar e Gerenciar grupos de VMs idênticas, e com balanceamento de carga; 
-       - Centraliza a configuração e pode automaticamente dimensionar horizontalmente sob demanda ou agendamento; 
+       - Centraliza a configuração e pode automaticamente dimensionar horizontalmente sobre a demanda ou agendamento; 
        - Também é integrado com balanceamento de carga, então o tráfego é distribuído eficientemente. 
 
      - Virtual Machine Availability Sets 
@@ -557,7 +557,7 @@
   </details>      
 
   <details>
-  <summary> 3.6. Microsoft Defender for Cloud </summary>
+  <summary> 3.6 Microsoft Defender for Cloud </summary>
   <div>
 
    - Defender for Cloud 
@@ -568,11 +568,33 @@
        - Azure PaaS Services;
        - Azure Data Services; 
        - Networks. 
-       
+
      - Para Proteções On-Premises, precisaria provisionar o Azure Arc e ativar o Defender for Cloud. 
 
   </div>
   </details>        
+
+  <details>
+  <summary> 4.1 Design Governance </summary>
+  <div>
+
+   - Governança 
+     - Providencia mecanismos e processos para manter controle sobre aplicações e recursos no Azure; 
+     - Envolve determinar requisitos, planejar iniciativas e definir prioridades estratégicas. 
+     - Exemplos de estratégias de governança:
+       - Azure Policies;
+       - Resource Tags. 
+
+     - A Hierarquia do Azure possui 4 níveis:
+       - Management Groups: 
+       - Subscriptions:
+       - Policy:
+       - Compliance:
+    
+
+  </div>
+  </details>        
+
 
 
 </div> 
