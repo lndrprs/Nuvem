@@ -530,6 +530,39 @@
        - Assuma Invasão: Para limitar o potencial impacto e acesso segmentado. 
 
   </div>
+  </details>       
+
+  <details>
+  <summary> 3.5 Encryption and Key Management in Azure </summary>
+  <div>
+
+   - Encryption
+     - Encryption at Rest: Protege os dados quando armazenados, como em bancos de dados, discos e storage accounts;
+       - Exemplos: AES-256 / Service Managed Keys;
+     - Encryption in Transit: Protege os dados enquanto eles se movem entre serviços, aplicações e usuários. 
+       - Exemplos: TLS / HTTPS/ VPN Tunnels. 
+
+   - Azure Key Vault
+     - Serviço para armazenar de forma segura, e controlar os acessos, à:
+       - Secrets (Connection Strings e Passwords);
+       - Encryption Keys;
+       - Certificates.   
+     - Centraliza o gerenciamento de segredos e chaves ao invés de inserir no código diretamente ou nas configurações. 
+       - Usando o Vault, ajuda a:
+         - Controlar quem acessa as chaves e segredos; 
+         - Rotacionar e atualizar chaves ao longo do tempo;
+         - Auditar uso de chave e segredos. 
+
+  </div>
+  </details>      
+
+  <details>
+  <summary> 3.6. Microsoft Defender for Cloud </summary>
+  <div>
+
+   - 
+
+  </div>
   </details>        
 
 
