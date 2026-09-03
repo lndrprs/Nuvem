@@ -578,6 +578,37 @@
   <summary> 4.1 Design Governance </summary>
   <div>
 
+<<<<<<< HEAD
+   - Governança 
+     - Providencia mecanismos e processos para manter controle sobre aplicações e recursos no Azure; 
+     - Envolve determinar requisitos, planejar iniciativas e definir prioridades estratégicas. 
+     - Exemplos de estratégias de governança:
+       - Azure Policies;
+       - Resource Tags. 
+
+     - A Hierarquia do Azure possui 5 níveis:
+       - Tenant Root Group: Todos os management groups e subscriptions. Políticas Globais e atribuições de Role em nível de diretório;
+       - Management Groups: Gerenciar acesso, políticas, e compliance para múltiplas subscriptions;
+       - Subscriptions: Contêineres lógicos que servem como unidades de gerenciamento e dimensionamento. Também são limites de cobrança / billing;
+       - Resource Groups: Contêineres Lógicos onde os recursos do Azure são provisionados e gerenciados;
+       - Resources: Instâncias dos serviços. 
+    
+  </div>
+  </details> 
+
+  <details>
+  <summary> 4.2 Design for Management Groups </summary>
+  <div>
+
+   - 
+   
+  </div>
+  </details>        
+
+
+
+
+=======
    - Governança 
      - Providencia mecanismos e processos para manter controle sobre aplicações e recursos no Azure; 
      - Envolve determinar requisitos, planejar iniciativas e definir prioridades estratégicas. 
@@ -597,6 +628,7 @@
 
 
 
+>>>>>>> 679ad41313f5f99a49108c0bd46156a47c59c798
 </div> 
 </details>
 
