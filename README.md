@@ -560,7 +560,16 @@
   <summary> 3.6. Microsoft Defender for Cloud </summary>
   <div>
 
-   - 
+   - Defender for Cloud 
+     - Serviço de proteção contra ameaças e gerenciamento de segurança; 
+     - Monitora a Cloud, On-Premises, Hybrid, e Multicloud, providenciando recomendações e alertas; 
+     - Ajuda a fortalecer recursos, rastrear riscos, e responder a ameaças. No Azure, é nativamente integrado. 
+     - Proteções Azure-Native:
+       - Azure PaaS Services;
+       - Azure Data Services; 
+       - Networks. 
+       
+     - Para Proteções On-Premises, precisaria provisionar o Azure Arc e ativar o Defender for Cloud. 
 
   </div>
   </details>        
