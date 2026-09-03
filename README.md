@@ -578,7 +578,6 @@
   <summary> 4.1 Design Governance </summary>
   <div>
 
-<<<<<<< HEAD
    - Governança 
      - Providencia mecanismos e processos para manter controle sobre aplicações e recursos no Azure; 
      - Envolve determinar requisitos, planejar iniciativas e definir prioridades estratégicas. 
@@ -603,32 +602,8 @@
    - 
    
   </div>
-  </details>        
+  </details>          
 
-
-
-
-=======
-   - Governança 
-     - Providencia mecanismos e processos para manter controle sobre aplicações e recursos no Azure; 
-     - Envolve determinar requisitos, planejar iniciativas e definir prioridades estratégicas. 
-     - Exemplos de estratégias de governança:
-       - Azure Policies;
-       - Resource Tags. 
-
-     - A Hierarquia do Azure possui 4 níveis:
-       - Management Groups: 
-       - Subscriptions:
-       - Policy:
-       - Compliance:
-    
-
-  </div>
-  </details>        
-
-
-
->>>>>>> 679ad41313f5f99a49108c0bd46156a47c59c798
 </div> 
 </details>
 
