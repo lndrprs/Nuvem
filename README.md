@@ -516,7 +516,18 @@
   <summary> 3.4 Azure Role-Based Access Control </summary>
   <div>
 
-   - 
+   - Azure RBAC 
+     - Controle de acesso através de escopos, com funções embutidas (Owner, Reader, Contributor, Custom);
+     - Os escopos podem ser: Management Group, Subscription, Resource Group, Resource;
+     - As permissões de níveis inferiores são herdadas dos níveis superiores;
+       - Sendo Management Group o nível maior, e o Resource individual o nível menor. 
+
+   - Zero Trust Model 
+     - Modelo que assume que acontecerá o pior cenário, e protege os recursos com essa expectativa; 
+     - Os 3 princípios: 
+       - Verificar Explicitamente a autenticação e autorização;
+       - Acesso de Menor Privilégio: Limitar os acessos com JIT e JEA, políticas e proteção de dados;
+       - Assuma Invasão: Para limitar o potencial impacto e acesso segmentado. 
 
   </div>
   </details>        
