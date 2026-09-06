@@ -100,7 +100,7 @@
   </details>
 
   <details>
-  <summary> 1.2 Azure Compute Products - Referência: <a href="https://learn.microsoft.com/en-us/azure/?product=compute"> Documentação Técnica</a></summary>
+  <summary> 1.2 Azure Compute Products - <a href="https://learn.microsoft.com/en-us/azure/?product=compute"> Documentação Técnica</a></summary>
   <div>
 
    - Virtual Machines 
