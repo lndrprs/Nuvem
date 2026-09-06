@@ -25,11 +25,13 @@
   <summary> 1.1 Azure Compute Products </summary>
   <div>
 
- <br> 
+<br> 
 
    | Serviço | Descrição | Documentação |
    |---------|-----------|--------------|
-   | Azure VMs | Privisionamento de Máquinas Virtuais | <a href="https://learn.microsoft.com/en-us/azure/virtual-machines/overview"> Documentação VMs</a> |
+   | Azure VMs | Privisionamento de Máquinas Virtuais | <a href="https://learn.microsoft.com/en-us/azure/virtual-machines/overview"> Virtual Machines</a> |
+   | Azure VMS Scale Sets  | Grupo de Máquinas Virtuais com LB | <a href="https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/overview"> Scale Sets</a> |
+   | Azure Compute Fleet  | Frota de Máquinas Virtuais | <a href="https://learn.microsoft.com/en-us/azure/azure-compute-fleet/overview"> Compute Fleet</a> |   
 
 <br>
 
