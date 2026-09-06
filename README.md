@@ -25,9 +25,13 @@
   <summary> 1.1 Azure Compute Products </summary>
   <div>
 
+ <br> 
+
    | Serviço | Descrição | Documentação |
    |---------|-----------|--------------|
    | Azure VMs | Privisionamento de Máquinas Virtuais | <a href="https://learn.microsoft.com/en-us/azure/virtual-machines/overview"> Documentação VMs</a> |
+
+<br>
 
   </div>
   </details>           
