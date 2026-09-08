@@ -37,6 +37,9 @@
    | Azure CycleCloud  | Orquestração de Ambientes HPC (High Performance Computing) | <a href="https://learn.microsoft.com/en-us/azure/cyclecloud/overview?view=cyclecloud-8"> CycleCloud </a> |      
    | Azure Dedicated Hosts  | Servidores Físicos para Hospedagem de VMs | <a href="https://learn.microsoft.com/en-us/azure/virtual-machines/dedicated-hosts"> Dedicated Hosts </a> |
    | Azure Functions  | Solução Serverless com Foco em Código | <a href="https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview"> Functions </a> |      
+   | Azure Kubernetes Fleet Manager  | Gerenciamento de Múltiplos Clusters Kubernetes | <a href="https://learn.microsoft.com/en-us/azure/kubernetes-fleet/overview"> K8s Fleet Manager </a> | 
+   | Azure Kubernetes Service  | Serviço Gerenciado de K8s | <a href="https://learn.microsoft.com/en-us/azure/aks/what-is-aks"> Kubernetes </a> |      
+   | Azure Quantum  | Serviço de Computação Quântica | <a href="https://learn.microsoft.com/en-us/azure/quantum/overview-azure-quantum"> Quantum </a> |      
 
 
 <br>
