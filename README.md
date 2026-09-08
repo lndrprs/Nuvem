@@ -35,7 +35,7 @@
    | Azure App Service  | Plataforma para Aplicações Web, APIs e Back Ends para Mobiles | <a href="https://learn.microsoft.com/en-us/azure/app-service/overview"> App Service </a> |      
    | Azure Container Instances (ACI) | Execução de Contêineres no Azure | <a href="https://learn.microsoft.com/en-us/azure/container-instances/container-instances-overview"> Container Instances </a> |       
    | Azure CycleCloud  | Orquestração de Ambientes HPC (High Performance Computing) | <a href="https://learn.microsoft.com/en-us/azure/cyclecloud/overview?view=cyclecloud-8"> CycleCloud </a> |      
-   | Azure Dedicated Hosts  | Servidores Físicos para Hospedagem de VMs | <a href=https://learn.microsoft.com/en-us/azure/virtual-machines/dedicated-hosts"> Dedicated Hosts </a> |
+   | Azure Dedicated Hosts  | Servidores Físicos para Hospedagem de VMs | <a href="https://learn.microsoft.com/en-us/azure/virtual-machines/dedicated-hosts"> Dedicated Hosts </a> |
    | Azure Functions  | Solução Serverless com Foco em Código | <a href="https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview"> Functions </a> |      
 
 
